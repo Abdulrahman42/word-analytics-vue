@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import Heading1 from "./Heading1.vue";
 import BackgroundImage from "./BackgroundImage.vue";
 </script>
