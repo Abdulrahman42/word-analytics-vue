@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Proxima Nova;
+    font-weight: 400;
+    src: url(/fonts/proxima-nova/400-regular.woff) format("woff");
+  }
+  @font-face {
+    font-family: Proxima Nova;
+    font-weight: 500;
+    src: url(/fonts/proxima-nova/500-medium.woff) format("woff");
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+textarea {
+  all: unset;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #e1e8eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg {
+  @apply bg-[linear-gradient(_to_right,rgba(141,30,133,0.9),rgba(24,160,175,0.9)_),url("https://images.unsplash.com/photo-1546453667-8a8d2d07bc20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=100")];
+}
+
+.stat:nth-child(1),
+.stat:nth-child(2) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.stat:nth-child(2),
+.stat:nth-child(4) {
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 1150px) {
+  .stat {
+    padding: 15px 10px;
+  }
+
+  .stat:nth-child(1),
+  .stat:nth-child(2),
+  .stat:nth-child(4) {
+    border: none;
+  }
+}
